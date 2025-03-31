@@ -1,0 +1,13 @@
+Instruction Statistics:
+total_instructions: 68
+prog_instructions: 1
+exe_instructions: 66
+end_instructions: 1
+memory_reads: 27
+memory_writes: 12
+mac_operations: 27
+
+Efficiency Metrics:
+Compute to Total Instruction Ratio: 0.9706
+Memory to Total Instruction Ratio: 0.5735
+Instructions per MAC Operation: 2.5185

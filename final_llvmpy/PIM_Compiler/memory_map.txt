@@ -1,0 +1,6 @@
+Matrix A: Start=0x100, End=0x123, Rows=3, Cols=3, Element Size=4
+  Subarray ID: 0, Row Offset: 0
+Matrix B: Start=0x100, End=0x123, Rows=3, Cols=3, Element Size=4
+  Subarray ID: 0, Row Offset: 0
+Matrix C: Start=0x100, End=0x123, Rows=3, Cols=3, Element Size=4
+  Subarray ID: 0, Row Offset: 0
