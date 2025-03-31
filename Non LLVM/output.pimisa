@@ -1,0 +1,75 @@
+// Matrix Multiplication: (3x3) * (3x2)
+// Memory layout:
+// - Matrix A: rows 0-8
+// - Matrix B: rows 9-14
+// - Result Matrix C: rows 15+
+// Total instructions: 68
+
+0000: PROG, pointer=1, read=0, write=0, row_addr=0 => 0x010000 | Program/Configure processing elements
+0001: EXE, pointer=2, read=0, write=0, row_addr=0 => 0x420000 | Initialize accumulator to 0
+0002: EXE, pointer=3, read=1, write=0, row_addr=0 => 0x430200 | Load value from Matrix A, Read from row 0
+0003: EXE, pointer=4, read=1, write=0, row_addr=9 => 0x440209 | Load value from Matrix B, Read from row 9
+0004: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0005: EXE, pointer=3, read=1, write=0, row_addr=1 => 0x430201 | Load value from Matrix A, Read from row 1
+0006: EXE, pointer=4, read=1, write=0, row_addr=11 => 0x44020B | Load value from Matrix B, Read from row 11
+0007: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0008: EXE, pointer=3, read=1, write=0, row_addr=2 => 0x430202 | Load value from Matrix A, Read from row 2
+0009: EXE, pointer=4, read=1, write=0, row_addr=13 => 0x44020D | Load value from Matrix B, Read from row 13
+0010: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0011: EXE, pointer=6, read=0, write=1, row_addr=15 => 0x46010F | Store result to Matrix C, Write to row 15
+0012: EXE, pointer=2, read=0, write=0, row_addr=0 => 0x420000 | Initialize accumulator to 0
+0013: EXE, pointer=3, read=1, write=0, row_addr=0 => 0x430200 | Load value from Matrix A, Read from row 0
+0014: EXE, pointer=4, read=1, write=0, row_addr=10 => 0x44020A | Load value from Matrix B, Read from row 10
+0015: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0016: EXE, pointer=3, read=1, write=0, row_addr=1 => 0x430201 | Load value from Matrix A, Read from row 1
+0017: EXE, pointer=4, read=1, write=0, row_addr=12 => 0x44020C | Load value from Matrix B, Read from row 12
+0018: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0019: EXE, pointer=3, read=1, write=0, row_addr=2 => 0x430202 | Load value from Matrix A, Read from row 2
+0020: EXE, pointer=4, read=1, write=0, row_addr=14 => 0x44020E | Load value from Matrix B, Read from row 14
+0021: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0022: EXE, pointer=6, read=0, write=1, row_addr=16 => 0x460110 | Store result to Matrix C, Write to row 16
+0023: EXE, pointer=2, read=0, write=0, row_addr=0 => 0x420000 | Initialize accumulator to 0
+0024: EXE, pointer=3, read=1, write=0, row_addr=3 => 0x430203 | Load value from Matrix A, Read from row 3
+0025: EXE, pointer=4, read=1, write=0, row_addr=9 => 0x440209 | Load value from Matrix B, Read from row 9
+0026: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0027: EXE, pointer=3, read=1, write=0, row_addr=4 => 0x430204 | Load value from Matrix A, Read from row 4
+0028: EXE, pointer=4, read=1, write=0, row_addr=11 => 0x44020B | Load value from Matrix B, Read from row 11
+0029: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0030: EXE, pointer=3, read=1, write=0, row_addr=5 => 0x430205 | Load value from Matrix A, Read from row 5
+0031: EXE, pointer=4, read=1, write=0, row_addr=13 => 0x44020D | Load value from Matrix B, Read from row 13
+0032: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0033: EXE, pointer=6, read=0, write=1, row_addr=17 => 0x460111 | Store result to Matrix C, Write to row 17
+0034: EXE, pointer=2, read=0, write=0, row_addr=0 => 0x420000 | Initialize accumulator to 0
+0035: EXE, pointer=3, read=1, write=0, row_addr=3 => 0x430203 | Load value from Matrix A, Read from row 3
+0036: EXE, pointer=4, read=1, write=0, row_addr=10 => 0x44020A | Load value from Matrix B, Read from row 10
+0037: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0038: EXE, pointer=3, read=1, write=0, row_addr=4 => 0x430204 | Load value from Matrix A, Read from row 4
+0039: EXE, pointer=4, read=1, write=0, row_addr=12 => 0x44020C | Load value from Matrix B, Read from row 12
+0040: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0041: EXE, pointer=3, read=1, write=0, row_addr=5 => 0x430205 | Load value from Matrix A, Read from row 5
+0042: EXE, pointer=4, read=1, write=0, row_addr=14 => 0x44020E | Load value from Matrix B, Read from row 14
+0043: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0044: EXE, pointer=6, read=0, write=1, row_addr=18 => 0x460112 | Store result to Matrix C, Write to row 18
+0045: EXE, pointer=2, read=0, write=0, row_addr=0 => 0x420000 | Initialize accumulator to 0
+0046: EXE, pointer=3, read=1, write=0, row_addr=6 => 0x430206 | Load value from Matrix A, Read from row 6
+0047: EXE, pointer=4, read=1, write=0, row_addr=9 => 0x440209 | Load value from Matrix B, Read from row 9
+0048: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0049: EXE, pointer=3, read=1, write=0, row_addr=7 => 0x430207 | Load value from Matrix A, Read from row 7
+0050: EXE, pointer=4, read=1, write=0, row_addr=11 => 0x44020B | Load value from Matrix B, Read from row 11
+0051: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0052: EXE, pointer=3, read=1, write=0, row_addr=8 => 0x430208 | Load value from Matrix A, Read from row 8
+0053: EXE, pointer=4, read=1, write=0, row_addr=13 => 0x44020D | Load value from Matrix B, Read from row 13
+0054: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0055: EXE, pointer=6, read=0, write=1, row_addr=19 => 0x460113 | Store result to Matrix C, Write to row 19
+0056: EXE, pointer=2, read=0, write=0, row_addr=0 => 0x420000 | Initialize accumulator to 0
+0057: EXE, pointer=3, read=1, write=0, row_addr=6 => 0x430206 | Load value from Matrix A, Read from row 6
+0058: EXE, pointer=4, read=1, write=0, row_addr=10 => 0x44020A | Load value from Matrix B, Read from row 10
+0059: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0060: EXE, pointer=3, read=1, write=0, row_addr=7 => 0x430207 | Load value from Matrix A, Read from row 7
+0061: EXE, pointer=4, read=1, write=0, row_addr=12 => 0x44020C | Load value from Matrix B, Read from row 12
+0062: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0063: EXE, pointer=3, read=1, write=0, row_addr=8 => 0x430208 | Load value from Matrix A, Read from row 8
+0064: EXE, pointer=4, read=1, write=0, row_addr=14 => 0x44020E | Load value from Matrix B, Read from row 14
+0065: EXE, pointer=5, read=0, write=0, row_addr=0 => 0x450000 | Multiply and accumulate values
+0066: EXE, pointer=6, read=0, write=1, row_addr=20 => 0x460114 | Store result to Matrix C, Write to row 20
+0067: END, pointer=0, read=0, write=0, row_addr=0 => 0x800000 | Terminate execution
