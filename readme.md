@@ -89,16 +89,3 @@ This project is provided for educational and research purposes.
 ## Acknowledgments
 
 Based on the paper "Flexible Instruction Set Architecture for Programmable Look-up Table based Processing-in-Memory."
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/59c61b19-141b-4b7d-a1f7-f5b7a7772768/Compiler-Design-Project-Report_-Custom-PIM-Architecture-Translator.pdf
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/de5fd2ea-94b8-4176-8d45-83a98ce4f57f/llvm_generator.py
-[3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/7b3d8dea-fbcf-4d00-97aa-ce6c1c4dbc12/memory_mapper.py
-[4] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/9eb87230-7767-4b71-9ed6-db9233791956/matrix_parser.py
-[5] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/4d46762e-8b34-41f1-83f0-92d7c8a63b32/instruction_generator.py
-[6] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/ddca65aa-b62a-4f8c-8ea5-aa8f8a725fd1/output_handler.py
-[7] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/f12f3180-6e36-48d0-b8cb-2c89234367ae/sample.cpp
-[8] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/55522840/561405b2-41df-4611-b7fe-d8c260390fc4/pim_compiler.py
-
----
-Answer from Perplexity: pplx.ai/share
